@@ -1,0 +1,164 @@
+body{
+    color: black;
+}
+
+.contentWrapper{
+    display: flex;
+    /* border: 1px solid red; */
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.greyColumn{
+    /* border: 1px orange solid; */
+    min-width: 300px;
+    width: 300px;
+    display: flex;
+    margin-top: 50px;
+    flex-direction: column;
+}
+
+.whiteColumn{
+    /* border: 1px solid blue; */
+    display: flex;
+    margin-top: 50px;
+    flex-direction: column;
+    margin-left: 30px;
+    max-width: 920px;
+    width: calc(100vw - 80px - 300px);
+}
+
+.biographyTitle{
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-top: 30px;
+}
+
+.biographyParagraph{
+    margin-top: 3px;
+    font-size: 1.1em;
+}
+
+.biographyParagraphTwo{
+    margin-top: 22px;
+    font-size: 1.1em;
+}
+
+#personImg{
+    cursor: pointer;
+}
+
+.personalInfo{
+    font-size: 1.3em;
+    font-weight: 600;
+    margin-top: 25px;
+}
+
+.facts{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    line-height: 1.2;
+}
+
+#span{
+    line-height: 1.5;
+}
+
+.socialMediaContainer{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    max-width: 300px;
+    /* border: 1px solid red; */
+}
+
+.knownForImg{
+    width: 130px; 
+    height: 195px;
+    border-radius: 8px;
+}
+
+.movieItemTitle{
+    color: #000;
+    font-size: 0.9rem;
+    font-style: normal;
+    font-weight: 200;
+}
+
+.movieItemTitle:hover{
+    color: rgb(20, 218, 218);
+}
+
+.knownForTitle{
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin-top: 8px;
+}
+
+.innerDate{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.titleName{
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.nullCondition{
+    font-weight: bold;
+}
+
+.deathBirthDate{
+    display: flex;
+    flex-direction: column;
+    /* gap: 20px; */
+}
+
+.knownForSection{
+    /* border: 1px solid black; */
+    margin-top: 22px;
+}
+
+.knownForScroller.row{
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: row; */
+    /* overflow-x: scroll; */
+    /* flex-wrap: nowrap; */
+    /* gap: 20px; */
+    row-gap: 10px;
+    column-gap: 20px;
+}
+
+.knownForMoviesList{
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+ul{
+    padding: 0;
+    list-style: none;
+    margin-top: 8px;
+}
+
+li{
+    width: 130px !important;
+    max-width: 190px;
+    word-wrap: break-word;
+    cursor: pointer;
+}
+
+.detailsPageImg{
+    width: 300px;
+    height: 450px;
+    border-radius: 5px;
+}

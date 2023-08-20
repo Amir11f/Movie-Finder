@@ -1,0 +1,740 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@900&display=swap');
+Link{
+    text-decoration: none;
+}
+
+.card_box{
+    text-decoration: none;
+}
+.posterPass{
+    background-color: cornflowerblue;
+    width: 100%;
+    height: 33rem;
+    color: rgb(94, 94, 94);
+}
+
+.poster{
+    width: 100%;
+    height: 36rem;
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: left calc((50vw - 170px) - 340px) top;
+    position: relative;
+    display:flex;
+    flex-direction: row;
+    position: relative;
+    margin-top: 5rem;
+}
+
+.poster::after{
+    position:absolute;
+    background: linear-gradient(to left ,transparent, 20% ,rgb(0, 0, 0));
+    content: "";
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.detail-main{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+
+.red{
+    width: 100%;
+}
+
+.mainDT{
+    width: 100%;
+}
+
+.left-poster{
+    max-width: 23rem;
+    height: 36rem;
+    margin-left: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    position: relative;
+    margin-top: -36rem;
+}
+
+.right-poster{
+    min-width: 30rem;
+    padding-right: 4rem;  
+    height: 36rem;
+    position: relative;
+    margin-top: -37rem;
+    padding-left: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+
+.right-posterT{
+    min-width: 30rem;
+    padding-right: 4rem;  
+    height: 36rem;
+    position: relative;
+    margin-top: -38.5rem;
+    padding-left: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+
+.orgenize-top{
+    position: relative;
+    top: 7rem;
+}
+
+.poster-img{
+    width: 19rem;
+    height: 29rem;
+    border-radius: 10px;
+    margin-left: 3rem;
+}
+
+.collect{
+    display: flex;
+    flex-direction: row;
+}
+
+.right-poster-row1{
+    display: flex;
+    flex-direction: row;
+}
+
+.right-poster-row2{
+    display: flex;
+    flex-direction: row;
+}
+
+.right-poster-row3{
+    /* border: 1px solid red; */
+    border-radius: 50%;
+    background-color: #091c23;
+    height: 60px;
+    width: 60px;
+    color: black;
+    font-weight: bold;
+    margin-bottom: 1.3rem;
+    margin-top: .3rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.right-poster-row5{
+    display: flex;
+    flex-direction: column;
+}
+
+.original_title{
+    color: #fff;
+    font-weight: 700;
+    font-size: 38px;
+}
+
+.release_date1{
+    color: rgb(202, 202, 202);
+    font-size: 38px;
+    font-weight: 500;
+}
+
+.release_date1::before{
+    content: '(';
+    padding-left: .5rem;
+}
+
+.release_date1::after{
+    content: ')';
+}
+
+.release_date2{
+    font-size: 20px;
+    font-family: 'Source Sans Pro', sans-serif;    
+    padding-right: .5rem;
+    font-weight: 300;
+}
+
+.genres_poster{
+    font-size: 17px;
+    font-family: 'Source Sans Pro', sans-serif;    
+    position: relative;
+    margin-top: -17px;
+    font-weight: 400;
+    color: rgb(231, 231, 231);
+    padding-bottom: 1rem;
+}
+
+.genres_poster::before{
+    content: '';
+    padding-right: .5rem;
+    font-size: 35px;
+}
+
+.runtime{
+    font-size: 17px;
+    font-weight: 400;
+    position: relative;
+    margin-top: -17px;
+}
+
+.runtime::before{
+    content: '.';
+    padding-right: .5rem;
+    font-size: 35px;
+    padding-left: .5rem;
+}
+
+.tagline{
+    font-size: 17px;
+    color: rgb(188, 188, 188);
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 600;
+    padding-bottom: .7rem;
+}
+
+.overview1{
+    font-size: 19px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding-bottom: .6rem;
+}
+
+.overview2{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.left-details{
+    width:90%;
+    height: 60rem;
+    display: flex;
+    flex-direction: column;
+    margin-left: 5rem;
+}
+.right-details{
+    background-color: rgb(255, 255, 255);
+    width: 1rem;
+    height: 75rem;
+    box-shadow: 1rem 1rem 1rem 3rem rgb(255, 255, 255);
+    z-index: 9;
+    position: relative;
+    bottom: -5rem;
+}
+
+.under-poster{
+    width: 100%;
+    display: flex;
+    height: auto;
+    flex-direction: row;
+    background-color: #fff;
+    margin-bottom: -7rem;
+}
+
+.actor-part{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 1rem;
+}
+
+.expend-actors{
+    width: 138px;
+    height:auto;
+    background-color: #fff;
+    border: 1px solid rgb(243, 243, 243);
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+}
+
+.ex-img-actor{
+    width: 136px;
+    height:190px;
+    background-size: cover;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.realName-p1{
+    color: rgb(27, 27, 27);
+    font-size: 16px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 700
+}
+
+.realName-p2{
+    color: black;
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+
+.realName{
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.orgenization{
+    max-width: 100%;
+    height: 20rem;
+    position: relative;
+    bottom: -3rem;
+    margin-bottom: 1rem;
+}
+
+.introducer2{
+    color: black;
+    font-weight: 600;
+    font-size: 23px;
+    position: relative;
+    bottom: -1.5rem;
+    position: relative;
+    left: 1rem;
+}
+
+.introducer1{
+    color: black;
+    font-weight: 600;
+    font-size: 23px;
+    position: relative;
+    top: -1rem;
+    position: relative;
+    left: 1rem;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    background-color: #ebebeb;
+    height: 10px;
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #ececec;
+}
+
+.recImdStyle{
+    width: 278px;
+    height: 160px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.mainRec{
+    margin-bottom: 1rem;
+}
+
+.orgenization-recommends{
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 1rem;
+    position: relative;
+    bottom: -3rem;
+}
+
+.Recommendations{
+    position: relative;
+    bottom: -1.6rem;
+    margin-top: 1rem;
+}
+
+.rec-ditails{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.rec-movie-name{
+    color: black;
+}
+
+.rec-score{
+    color: black;
+    margin-left: 10px;
+}
+
+.hr{
+    width: 100%;
+    height: 1px;
+    background-color: rgb(207, 207, 207);
+    position: relative;
+    bottom: -5rem;
+}
+
+.hr2{
+    width: 100%;
+    height: 1px;
+    background-color: rgb(207, 207, 207);
+    position: relative;
+    bottom: -3rem;
+}
+
+
+.similars{
+    position: relative;
+    bottom: -19.9rem;
+}
+
+.hr1{
+    width: 100%;
+    height: 1px;
+    background-color: rgb(207, 207, 207);
+    position: relative;
+    bottom: -20rem;
+}
+
+.none{
+    display: none;
+    height: 0;
+}
+
+.showff{
+    color: darkolivegreen;
+    width: 2rem;
+    height: 4rem;
+    background-color: aqua;
+}
+
+
+.SBRP_main{
+    background-color: #ffffff;
+    width: 100%;
+    height: 100rem;
+}
+
+.release_date2{
+    font-size: 20px;
+    font-family: 'Source Sans Pro', sans-serif;    
+    padding-right: .5rem;
+    font-weight: 300;
+}
+
+.genres_poster::before{
+    content: '.';
+    padding-right: .5rem;
+    font-size: 35px;
+}
+
+.country_title{
+    font-size: 18px;
+    font-weight: 400;
+    color: #ececec;
+}
+
+.status_title{
+    font-size: 18px;
+    font-weight: 400;
+    color: #e3e3e3;
+}
+
+.countries{
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+    top: -6px;
+    right: 3px;
+}
+
+.country{
+    display: flex;
+    flex-direction: row;
+}
+
+.right-poster-row6{
+    margin-top: 2rem;
+}
+
+.status-situation{
+    display: flex;
+    flex-direction: row;
+}
+
+.status{
+    position: relative;
+    bottom: -2px;
+    left: 8px;
+}
+
+.media-section{
+    position: relative;
+    bottom: -6rem;
+    height: 9rem;
+    width: 100%;
+}
+
+.postersBox{
+    display:flex;
+    flex-direction: row;
+    background-size: cover;
+    width: 12rem;
+    height: 18rem;
+}
+
+.posterBoxFather{
+    display: flex;
+    flex-direction: row; 
+    overflow-x: scroll;
+    width: auto;
+    height: auto;
+}
+
+.backdropsBoxFather{
+    display: flex;
+    flex-direction: row; 
+    overflow-x: scroll;
+    width: auto;
+    height: auto;
+}
+
+.videoBoxFather{
+    display: flex;
+    flex-direction: row;  
+}
+
+.mostpopularBoxFather{
+    display: flex;
+    flex-direction: row; 
+    width: 100%;  
+}
+
+.backdropsBox{
+    height: 18rem;
+    width:32rem ;
+    background-size: cover;
+    display:flex;
+    flex-direction: row;
+}
+
+#media-title{
+    font-size: 22px;
+    font-weight: 600;
+    margin-right: 2rem;
+}
+
+.ulOrg{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1rem
+}
+
+#unorder{
+    margin: 0;
+    font-weight: 600;
+}
+
+.mediaLists{
+    display: flex;
+    flex-direction: row;
+    width: 10rem;
+    gap: 22px;
+}
+
+.innerLists{
+    display: flex;
+    font-weight: 600;
+    font-size: 18px;
+    width: auto;
+    cursor: pointer;
+}
+
+.underline{
+    width: 3rem;
+    height: 5px;
+    background-color: #091c23;
+    position: relative;
+}
+
+.recTitle{
+    cursor: pointer;
+}
+
+.videoClass{
+    width: 31rem;
+    height: 18rem;
+}
+
+.videoBoxFather{
+    width: auto;
+    overflow-x: scroll;
+    height: auto;
+}
+
+.right-poster-row3-orgenize{
+    display: flex;
+    flex-direction: row;
+}
+
+.showTrailer{
+    position: absolute;
+    display: flex;
+}
+
+.parent-color-trailer{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: transparent;
+    background-color: rgba(0,0,0,.8);
+    z-index: 12;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.videoClass2{
+    width: 66rem;
+    height: 43rem;
+}
+
+.trailerPra{
+    font-size: 19px;
+    font-weight: 600;
+    position: relative;
+    bottom: -1.7rem;
+}
+
+.movie-trailer{
+    display: flex;
+    flex-direction: row;
+}
+
+.trailerPra::before{
+    content: '';
+    margin-left: .4rem;
+}
+
+.I_faplay{
+    position: relative;
+    bottom: -1.95rem;
+}
+
+.right-poster-row3-frount{
+    position: relative;
+    left: 30%;
+    cursor: pointer;
+    
+}
+
+.userScoreP{
+    font-weight: 600;
+    font-size: 18px;
+    position: relative;
+    bottom: -.7rem;
+    left: .5rem;
+}
+
+.userScoreP::before{
+    content: '';
+}
+
+.right-poster-row7{
+    display: flex;
+    flex-direction: row;
+}
+
+.right-poster-row6{
+    display: flex;
+    flex-direction: row;
+}
+
+.seasonNumbers{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: -4px;
+}
+
+.number_of_episodes{
+    display: flex;
+    flex-direction: row;
+}
+
+.last-this-orgenize{
+    display: flex;
+    flex-direction: row;
+}
+
+.left-orgenize{
+    display: flex;
+    flex-direction: column;
+}
+
+.right-orgenize{
+    position: relative;
+    bottom: -2.4rem;
+    left: 25%;
+}
+
+.number_of_episodes{
+    position: relative;
+    bottom: -2px;
+}
+
+.last-airDate{
+    display: flex;
+    flex-direction: row;
+    margin-top: .4rem;
+}
+
+
+.loadingSpinnerContainer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 5000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .loadingSpinner {
+    width: 64px;
+    height: 64px;
+    border: 8px solid;
+    border-color: #00cc66 transparent #00cc66 transparent;
+    border-radius: 50%;
+    animation: spin 1.2s linear infinite;
+  }
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0.8;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }  

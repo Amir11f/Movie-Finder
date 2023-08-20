@@ -1,0 +1,127 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+body{
+    background-color: white;
+}
+
+.ppp{
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 20px;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    /* border: 1px solid olivedrab; */
+    justify-items: center;
+    
+    @media (min-width: 1280px) {
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+    
+    @media (min-width: 1024px) and (max-width: 1279px) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    
+    @media (min-width: 768px) and (max-width: 1023px) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+.profileCard{
+    border: 1px solid rgb(177, 177, 177) ;
+    display: flex;
+    flex-direction: column;
+    /* gap: 8px; */
+    height: fit-content;
+    width: fit-content;
+    /* border: 1px solid black; */
+    border-radius: 5px;
+    justify-content: center !important ;
+    align-items: center !important;
+}
+
+#personImg{
+    height: 340px;
+    width: 227px;
+    object-fit:contain;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.peopleContainerDiv{
+    /* border: 1px solid red; */
+    margin: 15px;
+    align-items: center;
+    justify-content: center;
+    width: 235px;
+    height: 235px;
+    justify-items: center;
+}
+
+.personName{
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.pageHeader{
+    padding-top: 80px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding-bottom: 20px;
+    width: fit-content;
+    margin: auto;
+}
+
+/* .profileCard{
+    background-color: white;
+    justify-content: center;
+    margin: auto;
+    width: 235px;
+    height: 270px;
+    overflow: hidden;
+    justify-items: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border-radius: 5px;
+} */
+
+.pagination{
+    color: black;
+    /* border: 1px solid red; */
+    margin-top: 10px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    gap: 5px;  
+}
+
+.active-page {
+    border: 1px solid black !important;
+    /* text-decoration: underline; */
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.pagination-btn{
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    color: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    line-height: inherit;
+    cursor: pointer;
+    outline: none;
+}
+
+#personImg{
+    cursor: pointer;
+}
+
