@@ -4,8 +4,7 @@ const ResultContext2 = createContext([])
 
 export const ResultProvider2 = ({ children }) => {
     const [getTvResult , setgetTvResult] = useState([])
-
-
+    
     return (
         <ResultContext2.Provider value={[getTvResult ,setgetTvResult]}>
             {children}

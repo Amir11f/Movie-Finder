@@ -7,14 +7,6 @@ import {FaPlay} from 'react-icons/fa'
 
 function PosterDetails({getDTT ,getTrailer}) {
   
-  const tarikh = Math.floor(getDTT.vote_average) // we can put const in  our return 
-
-  const getVideo = async ()=>{
-    const get = await axios.get(`https://api.themoviedb.org/3/tv/713704/videos?api_key=1b6ccfb407b0626e097c87368fba764e&language=en-US`)
-    console.log(get)
-  }
-  getVideo()
-
   const fullDate = getDTT && getDTT.first_air_date ? getDTT.first_air_date : '';
   const year = fullDate.substr(0, 4)
 

@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import axios from 'axios';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import ReactPlayer from 'react-player';
@@ -13,13 +12,8 @@ function PosterDetails({getDT ,getTrailer}) {
     return `${hours}h ${remainingMinutes}m`;
   }
 
-  const tarikh = Math.floor(getDT.vote_average) // we can put const in  our return 
+  // const tarikh = Math.floor(getDT.vote_average) // we can put const in  our return 
 
-  const getVideo = async ()=>{
-    const get = await axios.get(`https://api.themoviedb.org/3/movie/713704/videos?api_key=1b6ccfb407b0626e097c87368fba764e&language=en-US`)
-    console.log(get)
-  }
-  getVideo()
   const fullDate = getDT && getDT.release_date ? getDT.release_date : '';
   const year = fullDate.substr(0, 4)
 

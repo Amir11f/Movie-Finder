@@ -10,6 +10,7 @@ import { memo } from 'react'
 
 function SearchBoxN({searchBox}) {
 
+
     const [getSearch ,setGetSearch] = useState('')
     const [getResult , setGetResult] = useContext(ResultContext)
 
@@ -30,6 +31,7 @@ function SearchBoxN({searchBox}) {
     console.log(getSearch);      // should be remove
     console.log(getResult)
     console.log(getTvResult)
+    console.log('this page is rendering n............................')
 
     const onClickOperation = ()=>{
         searchMovie()
@@ -43,7 +45,6 @@ function SearchBoxN({searchBox}) {
                     <input placeholder='search for a movie, tv show'className='input1' type='text' onChange={(e)=>{setGetSearch(e.target.value)}} value={getSearch} />
                 </div>
                 <div className="inTypeIcon">
-                    {/* <Link to={'/searchBoxResultsPage'} ><FaSearch className='inTypeIcon1' onClick={()=>{onClickSearch() ;setGetSearch('')}}/></Link> */}
                     <Link to={'/searchBoxResultsPage'} ><FaSearch className='inTypeIcon1'  onClick={onClickOperation}/></Link>
                 </div>
             </div>

@@ -5,7 +5,6 @@ const ResultContext = createContext([])
 export const ResultProvider = ({ children }) => {
     const [getResult, setGetResult] = useState([])
 
-
     return (
         <ResultContext.Provider value={[getResult, setGetResult]}>
             {children}

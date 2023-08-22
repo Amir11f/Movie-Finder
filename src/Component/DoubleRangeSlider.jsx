@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { Range, getTrackBackground  } from 'react-range';
 
 const DoubleRangeSlider = ({ values, onChange }) => {

@@ -2,11 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import Spinner from './Spinner';
-import Footer from './Footer'
-import nullImage from '../assets/noimg.jpg'
+import nullImage from '../assets/1.png'
 
-
-const defaultPic = nullImage
 
 function PaginationBar({ totalPages, currentPage, handlePageChange }) {
   const [visiblePages, setVisiblePages] = useState(5);

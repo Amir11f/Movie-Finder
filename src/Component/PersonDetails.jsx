@@ -14,13 +14,7 @@ function PersonDetails() {
   const img = 'https://image.tmdb.org/t/p/original/';
   const moviePosterPreMade = 'https://www.themoviedb.org/t/p/w150_and_h225_bestv2/'
   const detailsUrl = `https://api.themoviedb.org/3/person/${personId}?api_key=1b6ccfb407b0626e097c87368fba764e&language=en-US&append_to_response=external_ids`
-  const getMovies = `https://api.themoviedb.org/3/discover/movie?api_key=1b6ccfb407b0626e097c87368fba764e&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_people=${personId}`
-
-  // const fetchData = async () => {
-  //   const response = await axios.get(`${detailsUrl}`)
-  //   console.log(response.data)
-  //   setPeopleDetails(response.data)
-  // }  <better version below>
+  const getMovies = `https://api.themoviedb.org/3/discover/movie?api_key=1b6ccfb407b0626e097c87368fba764e&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_people=${personId}` 
 
   useEffect(()=>{
     axios.get(`${detailsUrl}`)
@@ -102,7 +96,7 @@ function PersonDetails() {
 
   return (
     <div className="contentWrapper">
-
+v   
       <div className="greyColumn">
         <img className='detailsPageImg' src={`${img}${peopleDetails.profile_path}`} alt="" />
         
@@ -126,6 +120,8 @@ function PersonDetails() {
                 return(
                   <a href={`https://www.youtube.com/${value}`} target='_blank'>{socialMedia.youtube_id}</a>
                 )
+              default : 
+                  return key
              }
             }
               return null;
@@ -214,4 +210,4 @@ function PersonDetails() {
   )
 }
 
-export default PersonDetails
+export default PersonDetails  

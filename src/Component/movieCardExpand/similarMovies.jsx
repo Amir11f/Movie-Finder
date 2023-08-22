@@ -1,15 +1,7 @@
 import React from 'react'
 import noimg from '../../assets/noimg.jpg'
-import { useNavigate } from 'react-router-dom'
 
 function SimilarMovies({sim}) {
-
-    // const navigate2 = useNavigate()
-
-    // const setAndReload = ()=>{
-    //     navigate2(`/details/${sim.id}`)
-    //     //  window.location.reload()
-    // }
 
   return (
         <div className='mainRec'>

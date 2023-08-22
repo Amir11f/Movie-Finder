@@ -2,19 +2,16 @@ import axios from "axios"
 import { useState ,useEffect } from "react"
 import React from "react"
 import { useParams } from "react-router-dom"
-import PosterDetails from "../movieCardExpand/posterDetails"
 import PeopleForMovieCardExpend from "../movieCardExpand/peopleForMovieCardExpend"
 import RecommendationTvCard from './recommendationTvCard'
 import SimilarTvs from './similarTvs'
 import ReactPlayer from 'react-player';
 import PosterDetailsT from './PosterDetailsT'
 import { Link } from "react-router-dom"
-import { TvCard } from "../TvCard"
 
 function DetailsT() {
 
   const {tvId} = useParams()
-
 
   useEffect(() => {
     movieDitails();
@@ -24,12 +21,6 @@ function DetailsT() {
     getIMG();
     getVideo();
   }, [tvId]);
-
-    useEffect(()=>{
-        movieDitails()
-        gerRecommendation()
-        getSimilarMovie()
-    },[])
 
     const [getDTT ,setGetDTT] = useState([])
     const movieDitails = async()=>{
@@ -45,9 +36,7 @@ function DetailsT() {
       console.log(getDTT)
     },[getDTT])
 
-    // useEffect(()=>{
-    //   window.scrollTo(0, 0);
-    // },[])
+
 
     const [getActor ,setGetActor] = useState([])
     const getCredits = async ()=>{
@@ -82,11 +71,6 @@ function DetailsT() {
       setTrailer(get.data?.results)
       console.log(get.data?.results)
     }
-
-    useEffect(()=>{
-      getIMG()
-      getVideo()
-    },[])
 
     const [activeList, setActiveList] = useState("video");
 

@@ -1,21 +1,6 @@
-import React, { useEffect } from 'react'
 import noimg from '../../assets/noimg.jpg'
-import { Navigate, useNavigate } from 'react-router-dom'
-import { useParams } from 'react-router-dom'
-import Details from '../movieCardExpand/details'
 
 function RecommendationMovieCard({recommend}) {
-
-  // let navigate1 = useNavigate()
-
-  // const reloader = ()=>{
-  //   navigate1(`/details/${recommend.id}`)
-  //   // window.location.reload(false)
-  // }
-
-  // useEffect(()=>{
-    
-  // },[])
 
   return (
     <div className='mainRec'>

@@ -11,80 +11,63 @@ import { Link } from "react-router-dom"
 
 function Details() {
 
-    const {movieId} = useParams()
+  const {movieId} = useParams()
 
-    useEffect(()=>{
-        movieDitails()
-        gerRecommendation()
-        getSimilarMovie()
-    },[])
+  useEffect(() => {
+    movieDitails();
+    getCredits();
+    gerRecommendation();
+    getSimilarMovie();
+    getIMG();
+    getVideo();
+  }, []);
 
-    const [loading, setLoading] = useState(true);
+  const [getActor ,setGetActor] = useState([])
+  const[getRec ,setGetRec] = useState([])
+  const [getSimilar ,setGetSimiar] = useState([])
+  const [images ,setImages] = useState([])
+  const [trailer, setTrailer] = useState("")
+  const [getDT ,setGetDT] = useState([])
 
-    useEffect(() => {
-      setLoading(true);
-      movieDitails();
-      getCredits();
-      gerRecommendation();
-      getSimilarMovie();
-      getIMG();
-      getVideo();
-    }, [movieId]);
 
-    const [getDT ,setGetDT] = useState([])
     const movieDitails = async()=>{
         const get = await axios.get(`https://api.themoviedb.org/3/movie/${movieId}?api_key=1b6ccfb407b0626e097c87368fba764e&language=en-US`)
         setGetDT(get.data)
-        console.log(get.data)
-        setLoading(false);
+        console.log('dt')
     }
     
     useEffect(()=>{
       getCredits()
     },[getDT])
-
-    // useEffect(()=>{
-    //   window.scrollTo(0, 0);
-    // },[])
-
-    const [getActor ,setGetActor] = useState([])
+    
     const getCredits = async ()=>{
       const getapi = await axios.get(`https://api.themoviedb.org/3/movie/${getDT?.id}/credits?api_key=1b6ccfb407b0626e097c87368fba764e&language=en-US`)
-      console.log(getapi.data)
+      console.log('actaor')
       setGetActor(getapi.data)
     }
 
-    const[getRec ,setGetRec] = useState()
     const gerRecommendation = async ()=>{
       const get = await axios.get(`https://api.themoviedb.org/3/movie/${movieId}/recommendations?api_key=1b6ccfb407b0626e097c87368fba764e&language=en-US&page=1`)
       setGetRec(get.data.results)
     }
 
-    const [getSimilar ,setGetSimiar] = useState([])
     const getSimilarMovie = async ()=>{
       const get = await axios.get(`https://api.themoviedb.org/3/movie/${movieId}/similar?api_key=1b6ccfb407b0626e097c87368fba764e&language=en-US&page=1`)
       setGetSimiar(get.data.results)
-      console.log(get)
+      console.log('similer')
     }
 
-    const [images ,setImages] = useState([])
     const getIMG = async ()=>{
       const get = await axios.get(`https://api.themoviedb.org/3/movie/${movieId}/images?api_key=1b6ccfb407b0626e097c87368fba764e&language=en-US&include_image_language=en`)
       setImages(get.data)
       console.log(get.data);
     }
 
-    const [trailer, setTrailer] = useState("")
-    const getVideo = async ()=>{
+     const getVideo = async ()=>{
       const get = await axios.get(`https://api.themoviedb.org/3/movie/${movieId}/videos?api_key=1b6ccfb407b0626e097c87368fba764e&language=en-US`)
       setTrailer(get.data?.results)
       console.log(get.data?.results)
     }
-
-    useEffect(()=>{
-      getIMG()
-      getVideo()
-    },[])
 
     const [activeList, setActiveList] = useState("video");
 
