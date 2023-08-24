@@ -1,11 +1,14 @@
-import React, { useState } from 'react'
+import  { useState } from 'react'
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import ReactPlayer from 'react-player';
 import {FaPlay} from 'react-icons/fa'
 
-function PosterDetails({getDT ,getTrailer}) {
-  
+
+
+function PosterDetails({getDT  ,getTrailer }) {
+
+
   function formatMovieLength() {   // we can put function in our return
     const hours = Math.floor(getDT.runtime / 60);
     const remainingMinutes = getDT.runtime % 60;

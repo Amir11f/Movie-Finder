@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { Link } from 'react-router-dom';
-import { ReactDOM } from 'react';
 
 export default function ShowResults({res}) {
 
@@ -29,9 +28,7 @@ export default function ShowResults({res}) {
     }
   }
 
-
   const [ser ,setSer] = useState(window.innerWidth > 1050 && true)
-
 
     return(
         <div className='orgr' >

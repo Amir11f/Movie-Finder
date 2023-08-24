@@ -1,4 +1,3 @@
-import React from 'react'
 import noimg from '../../assets/noimg.jpg'
 
 function SimilarMovies({sim}) {

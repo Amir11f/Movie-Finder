@@ -1,11 +1,10 @@
 import axios from "axios"
 import { useState ,useEffect } from "react"
-import React from "react"
 import { useParams } from "react-router-dom"
 import PeopleForMovieCardExpend from "../movieCardExpand/peopleForMovieCardExpend"
 import RecommendationTvCard from './recommendationTvCard'
 import SimilarTvs from './similarTvs'
-import ReactPlayer from 'react-player';
+import ReactPlayer from   'react-player';
 import PosterDetailsT from './PosterDetailsT'
 import { Link } from "react-router-dom"
 

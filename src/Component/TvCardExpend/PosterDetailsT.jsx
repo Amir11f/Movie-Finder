@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import axios from 'axios';
+import { useState } from 'react'
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import ReactPlayer from 'react-player';

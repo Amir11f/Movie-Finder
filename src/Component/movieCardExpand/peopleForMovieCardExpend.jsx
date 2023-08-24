@@ -1,5 +1,5 @@
-import React from 'react'
 import nullImage from '../../assets/1.png'
+
 
 const defaultImg = nullImage
 

@@ -1,0 +1,19 @@
+@media(max-width :1050){
+    .orgr{
+        scale: (.5);
+    }
+
+    .left-part-img{
+        scale: (.5);
+    }
+
+    .right-part-details{
+        scale: (.5);
+    }
+    body {
+        transform: scale(2.1);
+        transform-origin: 0 0;
+        zoom: 50%
+     }
+
+}

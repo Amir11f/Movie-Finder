@@ -1,6 +1,5 @@
 import axios from "axios"
 import { useState ,useEffect } from "react"
-import React from "react"
 import { useParams } from "react-router-dom"
 import PosterDetails from "./posterDetails"
 import PeopleForMovieCardExpend from "./peopleForMovieCardExpend"
@@ -20,7 +19,7 @@ function Details() {
     getSimilarMovie();
     getIMG();
     getVideo();
-  }, []);
+  }, [movieId]);
 
   const [getActor ,setGetActor] = useState([])
   const[getRec ,setGetRec] = useState([])
@@ -127,7 +126,7 @@ function Details() {
             <h2 className="introducer1">Top Billed Cast</h2>
             <div className="actor-part">
               {getActor?.cast?.map((act)=>(
-                <Link to={`/popular/${act.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+                <Link to={`/popular/${act.id}`} style={{ textDecoration: 'none', color: 'inherit' }} key={act.id}>
                   <PeopleForMovieCardExpend actors={act}/>
                 </Link>
               ))}
@@ -139,7 +138,7 @@ function Details() {
             </div>
             <div className="orgenization-recommends">
               {getRec?.map((recommend)=>(
-              <Link to={`/details/${recommend.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+              <Link to={`/details/${recommend.id}`} style={{ textDecoration: 'none', color: 'inherit' }}key={recommend.id}>
                 <RecommendationMovieCard recommend={recommend}/>
               </Link>
               ))}
@@ -155,13 +154,13 @@ function Details() {
             </ul>
           </div>
             <div className="videoBoxFather">
-              {activeList === "video" && trailer?.length > 1 && trailer.map((res)=> <Videos resV={res}/>)}
+              {activeList === "video" && trailer?.length > 1 && trailer.map((res)=> <Videos resV={res} key={res.id}/>)}
             </div>
             <div className="backdropsBoxFather">
-              {activeList === "backdrop" && images.backdrops?.map((res)=><Backdrops resB={res}/>)}
+              {activeList === "backdrop" && images.backdrops?.map((res)=><Backdrops resB={res} key={res.id}/>)}
             </div>
             <div className="posterBoxFather">
-              {activeList === "poster2" && images.posters?.map((res)=><Posters resP={res}/>)}
+              {activeList === "poster2" && images.posters?.map((res)=><Posters resP={res} key={res.id}/>)}
             </div>
           </div>
           <div className={`${getSimilar?.length > 1 ? "hr1" : "none"}`}></div>
@@ -171,7 +170,7 @@ function Details() {
             </div>
             <div className="orgenization-recommends">
               {getSimilar?.map((simi)=>(
-                <Link to={`/details/${simi.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+                <Link to={`/details/${simi.id}`} style={{ textDecoration: 'none', color: 'inherit' }} key={simi.id}>
                   <SimilarMovies sim={simi} />
                 </Link>              
               ))}

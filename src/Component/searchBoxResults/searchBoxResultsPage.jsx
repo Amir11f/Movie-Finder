@@ -1,4 +1,4 @@
-import React, {useContext ,useState ,useEffect} from 'react'
+import  {useContext ,useState ,useEffect} from 'react'
 import ResultContext from '../contextThings'
 import Navbar from '../navbarAndDependencies/navbar'
 import ShowResults from './showResults'
@@ -44,8 +44,8 @@ function SearchBoxResultsPage() {
 
   function FinalResult({showTvMovie}) {
     return (
-    <div className='resultPart'>{showTvMovie ? getResult.length > 0 && getResult.map((resM)=> <ShowResults res={resM}/> )
-      : getTvResult !== undefined && getTvResult.map((resT)=> <ShowResultsT resT={resT}/>)}
+    <div className='resultPart'>{showTvMovie ? getResult.length > 0 && getResult.map((resM)=> <ShowResults res={resM} key={resM.id}/> )
+      : getTvResult !== undefined && getTvResult.map((resT)=> <ShowResultsT resT={resT} key={resT.id}/>)}
     </div>
     )  
   }

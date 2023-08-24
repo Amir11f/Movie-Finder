@@ -1,8 +1,7 @@
 import axios from 'axios'
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
-import { FaInstagram, FaFacebook, FaTiktok, FaTwitter, FaYoutube } from 'react-icons/fa'
-import Spinner from './Spinner'
+import { FaInstagram, FaFacebook, FaTwitter, FaYoutube } from 'react-icons/fa'
 
 function PersonDetails() {
   const [peopleDetails, setPeopleDetails] = useState([])
@@ -106,19 +105,19 @@ v
              switch (key) {
               case 'facebook_id':
                 return(
-                  <a href={`https://www.facebook.com/${value}/`} target='_blank'>{socialMedia.facebook_id}</a>
+                  <a href={`https://www.facebook.com/${value}/`}>{socialMedia.facebook_id}</a>
                 )
               case 'twitter_id':
                 return(
-                  <a href={`https://twitter.com/${value}`} target='_blank'>{socialMedia.twitter_id}</a>
+                  <a href={`https://twitter.com/${value}`} >{socialMedia.twitter_id}</a>
                 )
               case 'instagram_id':
                 return(
-                  <a href={`https://www.instagram.com/${value}/`} target='_blank'>{socialMedia.instagram_id}</a>
+                  <a href={`https://www.instagram.com/${value}/`} >{socialMedia.instagram_id}</a>
                 )
               case 'youtube_id':
                 return(
-                  <a href={`https://www.youtube.com/${value}`} target='_blank'>{socialMedia.youtube_id}</a>
+                  <a href={`https://www.youtube.com/${value}`} >{socialMedia.youtube_id}</a>
                 )
               default : 
                   return key
