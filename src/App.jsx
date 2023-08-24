@@ -1,5 +1,5 @@
 import './App.css';
-import "./movieCard.css"
+import "./MovieCard.css"
 import './ResponsiveStyles/SearchResultResponsive.css'
 import './ResponsiveStyles/Movie&TvPage-Responsive.css'
 import './ResponsiveStyles/Navbar_Responsive.css'
