@@ -39,7 +39,7 @@ function useTv(popularM) {
     });
 
     const BringGenres = async ()=>{
-        const data1 = await axios.get(`https://api.themoviedb.org/3/genre/tv/list?api_key=1b6ccfb407b0626e097c87368fba764e&language=en-US`)
+        const data1 = await axios.get(`https://api.themoviedb.org/3/genre/tv/list?api_key=(your api key)&language=en-US`)
         dispatch({type : 'state1' , payload : data1.data.genres})
     }
     console.log(state.state2)
@@ -79,7 +79,7 @@ function useTv(popularM) {
 
     //certification
     const GenCertificationM = async ()=>{
-        const get = await axios.get('https://api.themoviedb.org/3/certification/tv/list?api_key=1b6ccfb407b0626e097c87368fba764e')
+        const get = await axios.get('https://api.themoviedb.org/3/certification/tv/list?api_key=(your api key)')
         dispatch({type : 'state4', payload : get.data.certifications.US})
     }
 

@@ -24,7 +24,7 @@ export default function TopRatedTv() {
     }
     
     const topRatedTv = async (pageNumber)=>{
-        const get = await axios.get(`https://api.themoviedb.org/3/tv/top_rated?api_key=1b6ccfb407b0626e097c87368fba764e&language=en-USvote_count.gte=1000&country&vote_average.gte=6&with_genres=${state.state3}&primary_release_date.gte=${sliderValues[0]}-01-01&primary_release_date.lte=${sliderValues[1]}-${currentMonth}-${currentDay}&page=${pageNumber}&vote_count.gte=500&vote_average.gte=0`);
+        const get = await axios.get(`https://api.themoviedb.org/3/tv/top_rated?api_key=(your api key)&language=en-USvote_count.gte=1000&country&vote_average.gte=6&with_genres=${state.state3}&primary_release_date.gte=${sliderValues[0]}-01-01&primary_release_date.lte=${sliderValues[1]}-${currentMonth}-${currentDay}&page=${pageNumber}&vote_count.gte=500&vote_average.gte=0`);
         return get.data.results
     }
 

@@ -148,7 +148,7 @@ function Navbar() {
                     <IoIosPerson className='user-icon'/>
                     <div className="changeSearch">
                         <div id="search">
-                            <FaSearch id='second-icon' onClick={()=>{dispatch({type : 'state6' })}} className={`${state.ini6? 'hide' : 'show'}`}/>
+                            <FaSearch id='second-icon' onClick={()=>{dispatch({type : 'state6' }) , pulledData.focus()}} className={`${state.ini6? 'hide' : 'show'}`} />
                         </div>
                         <div id="search1"> 
                             <RiCloseLine id='second-hide-icon'onClick={()=>{dispatch({type : 'state6' })}} className={`${state.ini6? 'show' : 'hide'}`}/> 
@@ -157,9 +157,15 @@ function Navbar() {
                 </div>
             </div>
         </div>
-        <SearchBoxN searchBox={state.ini6} />
+        <SearchBoxN searchBox={state.ini6} func={pulledData} />
     </div>
   )
 }
 
+const pulledData = (data)=>{
+    return data
+}
+
+
 export default memo(Navbar)
+

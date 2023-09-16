@@ -23,7 +23,7 @@ function DetailsT() {
 
     const [getDTT ,setGetDTT] = useState([])
     const movieDitails = async()=>{
-        const get = await axios.get(`https://api.themoviedb.org/3/tv/${tvId}?api_key=1b6ccfb407b0626e097c87368fba764e&language=en-US`)
+        const get = await axios.get(`https://api.themoviedb.org/3/tv/${tvId}?api_key=(your api key)&language=en-US`)
         setGetDTT(get.data)
         console.log(get.data)
     }
@@ -39,34 +39,34 @@ function DetailsT() {
 
     const [getActor ,setGetActor] = useState([])
     const getCredits = async ()=>{
-      const getapi = await axios.get(`https://api.themoviedb.org/3/tv/${getDTT?.id}/credits?api_key=1b6ccfb407b0626e097c87368fba764e&language=en-US`)
+      const getapi = await axios.get(`https://api.themoviedb.org/3/tv/${getDTT?.id}/credits?api_key=(your api key)&language=en-US`)
       console.log(getapi.data)
       setGetActor(getapi.data)
     }
 
     const[getRec ,setGetRec] = useState()
     const gerRecommendation = async ()=>{
-      const get = await axios.get(`https://api.themoviedb.org/3/tv/${tvId}/recommendations?api_key=1b6ccfb407b0626e097c87368fba764e&language=en-US&page=1`)
+      const get = await axios.get(`https://api.themoviedb.org/3/tv/${tvId}/recommendations?api_key=(your api key)&language=en-US&page=1`)
       setGetRec(get.data.results)
     }
 
     const [getSimilar ,setGetSimiar] = useState([])
     const getSimilarMovie = async ()=>{
-      const get = await axios.get(`https://api.themoviedb.org/3/tv/${tvId}/similar?api_key=1b6ccfb407b0626e097c87368fba764e&language=en-US&page=1`)
+      const get = await axios.get(`https://api.themoviedb.org/3/tv/${tvId}/similar?api_key=(your api key)&language=en-US&page=1`)
       setGetSimiar(get.data.results)
       console.log(get)
     }
 
     const [images ,setImages] = useState([])
     const getIMG = async ()=>{
-      const get = await axios.get(`https://api.themoviedb.org/3/tv/${tvId}/images?api_key=1b6ccfb407b0626e097c87368fba764e&language=en-US&include_image_language=en`)
+      const get = await axios.get(`https://api.themoviedb.org/3/tv/${tvId}/images?api_key=(your api key)&language=en-US&include_image_language=en`)
       setImages(get.data)
       console.log(get.data);
     }
 
     const [trailer, setTrailer] = useState("")
     const getVideo = async ()=>{
-      const get = await axios.get(`https://api.themoviedb.org/3/tv/${tvId}/videos?api_key=1b6ccfb407b0626e097c87368fba764e&language=en-US`)
+      const get = await axios.get(`https://api.themoviedb.org/3/tv/${tvId}/videos?api_key=(your api key)&language=en-US`)
       setTrailer(get.data?.results)
       console.log(get.data?.results)
     }

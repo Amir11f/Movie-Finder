@@ -22,11 +22,11 @@ export default function PopularMovie() {
     if (currentMonth < 10) {
         currentMonth = '0' + currentMonth
     }
-    //  const get = await axios.get(`https://api.themoviedb.org/3/tv/popular?api_key=1b6ccfb407b0626e097c87368fba764e&vote_count.gte=1000&country&vote_average.gte=6&language=en-US&with_genres=${tate.state3 }&certification=${addCerReduce}&primary_release_date.gte=${formattedStringDate}&primary_release_date.lte=${formattedStringDateEnd}&certification_country=US&page=${pageNumber}`);
+    //  const get = await axios.get(`https://api.themoviedb.org/3/tv/popular?api_key=(your api key)&vote_count.gte=1000&country&vote_average.gte=6&language=en-US&with_genres=${tate.state3 }&certification=${addCerReduce}&primary_release_date.gte=${formattedStringDate}&primary_release_date.lte=${formattedStringDateEnd}&certification_country=US&page=${pageNumber}`);
 
     
     const popularM = async (pageNumber)=>{
-        const get = await axios.get(`https://api.themoviedb.org/3/tv/popular?api_key=1b6ccfb407b0626e097c87368fba764e&language=en-USvote_count.gte=1000&country&vote_average.gte=6&with_genres=${state.state3}&primary_release_date.gte=${sliderValues[0]}-01-01&primary_release_date.lte=${sliderValues[1]}-${currentMonth}-${currentDay}&page=${pageNumber}&vote_count.gte=500&vote_average.gte=0`);
+        const get = await axios.get(`https://api.themoviedb.org/3/tv/popular?api_key=(your api key)&language=en-USvote_count.gte=1000&country&vote_average.gte=6&with_genres=${state.state3}&primary_release_date.gte=${sliderValues[0]}-01-01&primary_release_date.lte=${sliderValues[1]}-${currentMonth}-${currentDay}&page=${pageNumber}&vote_count.gte=500&vote_average.gte=0`);
         return get.data.results
     }
 
