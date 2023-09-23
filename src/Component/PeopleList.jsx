@@ -62,7 +62,7 @@ function PeopleList() {
   const navigate = useNavigate();
 
   const img = 'https://image.tmdb.org/t/p/original/';
-  const apiUrl = `https://api.themoviedb.org/3/person/popular?api_key=(your api key)&language=en-US`;
+  const apiUrl = `https://api.themoviedb.org/3/person/popular?api_key=1b6ccfb407b0626e097c87368fba764e&language=en-US`;
 
   const fetchData = async (page) => {
     setLoading(true);

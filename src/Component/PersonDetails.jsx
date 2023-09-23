@@ -192,7 +192,7 @@ v
           <h5 className='knownForTitle'>Movies</h5>
           <div className="knownForScroller row">
             {knownFor?.map((movies)=>(
-              <ul className='knownForMoviesList'>
+              <ul className='knownForMoviesList' key={movies.id}>
                 <Link to={`/details/${movies.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
                 <li className='innerListMovies'>
                     <img src={`${moviePosterPreMade}${movies.poster_path}`} alt="img" className='knownForImg' />
