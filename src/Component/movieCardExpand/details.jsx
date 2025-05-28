@@ -26,6 +26,7 @@ function Details() {
   const [images, setImages] = useState([]);
   const [trailer, setTrailer] = useState("");
   const [getDT, setGetDT] = useState([]);
+  const [activeList, setActiveList] = useState("poster2");
 
   const movieDitails = async () => {
     const get = await axios.get(
@@ -77,8 +78,6 @@ function Details() {
     setTrailer(get.data?.results);
     console.log(get.data?.results);
   };
-
-  const [activeList, setActiveList] = useState("video");
 
   const handleListClick = (list) => {
     setActiveList(list);
@@ -186,24 +185,30 @@ function Details() {
           <div className="media-section">
             <div className="ulOrg">
               <p id="media-title">Media</p>
-              <ul className="mediaLists">
+              <ul className="mediaLists" type>
                 <li
-                  className="innerLists"
-                  onClick={() => handleListClick("video")}
+                  className={`innerLists ${
+                    activeList === "poster2" ? "active" : ""
+                  }`}
+                  onClick={() => handleListClick("poster2")}
                 >
-                  Videos
+                  Posters
                 </li>
                 <li
-                  className="innerLists"
+                  className={`innerLists ${
+                    activeList === "backdrop" ? "active" : ""
+                  }`}
                   onClick={() => handleListClick("backdrop")}
                 >
                   Backdrops
                 </li>
                 <li
-                  className="innerLists"
-                  onClick={() => handleListClick("poster2")}
+                  className={`innerLists ${
+                    activeList === "video" ? "active" : ""
+                  }`}
+                  onClick={() => handleListClick("video")}
                 >
-                  Posters
+                  Videos
                 </li>
               </ul>
             </div>
