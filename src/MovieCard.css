@@ -209,6 +209,7 @@ Link {
 
 .overview2 {
   font-family: "Source Sans Pro", sans-serif;
+  margin-right: 4rem;
 }
 
 .left-details {
@@ -745,8 +746,69 @@ Link {
   .collect {
     display: flex;
     flex-direction: column;
+    width: 100%;
   }
   .poster {
-    height: 70rem;
+    height: 66rem;
   }
+  .left-poster {
+  margin: 0;
+  max-width: 23rem;
+  height: 31rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 26rem;
+  margin-top: -65rem;
+}
+.right-poster {
+  min-width: 30rem;
+  padding-right: 4rem;
+  height: 36rem;
+  position: relative;
+  padding-left: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-left: 0;
+}
+.poster-img {
+  display: flex;
+  align-self: center;
+  width: 19rem;
+  height: 29rem;
+  margin: 0;
+  border-radius: 10px;
+}
+.left-details {
+  width: 90%;
+  height: 60rem;
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+}
+}
+
+@media (max-width: 480px) {
+  .right-poster {
+    min-width: 30rem;
+    padding-right: 4rem;
+    height: 36rem;
+    position: relative;
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-left: 0;
+  }
+  .orgenize-top {
+  position: relative;
+  top: 7rem;
+}
 }
