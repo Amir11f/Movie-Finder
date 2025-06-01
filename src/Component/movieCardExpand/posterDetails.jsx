@@ -83,36 +83,38 @@ function PosterDetails({ getDT, getTrailer }) {
               <p className="runtime">{formatMovieLength()}</p>
             </div>
             <div className="right-poster-row3-orgenize">
-              <div className="right-poster-row3">
-                {/* <p className='vote_average'>{getDT.vote_average?.toFixed(1)}</p> */}
-                <CircularProgressbar
-                  className="vote_average"
-                  value={getDT.vote_average}
-                  minValue={0}
-                  maxValue={10}
-                  text={`${getDT.vote_average?.toFixed(1)}`}
-                  styles={buildStyles({
-                    textSize: "37px",
-                    textColor: "white",
-                    pathColor:
-                      getDT.vote_average < 3
-                        ? "#a22955"
-                        : getDT.vote_average < 7
-                        ? "#b4bc66"
-                        : "#3bc183",
-                    trailColor:
-                      getDT.vote_average < 3
-                        ? "#541634"
-                        : getDT.vote_average < 7
-                        ? "#3f3d13"
-                        : "#21442b",
-                    bottomPadding: "3rem",
-                  })}
-                />
+              <div className="midful">
+                <div className="right-poster-row3">
+                  {/* <p className='vote_average'>{getDT.vote_average?.toFixed(1)}</p> */}
+                  <CircularProgressbar
+                    className="vote_average"
+                    value={getDT.vote_average}
+                    minValue={0}
+                    maxValue={10}
+                    text={`${getDT.vote_average?.toFixed(1)}`}
+                    styles={buildStyles({
+                      textSize: "37px",
+                      textColor: "white",
+                      pathColor:
+                        getDT.vote_average < 3
+                          ? "#a22955"
+                          : getDT.vote_average < 7
+                          ? "#b4bc66"
+                          : "#3bc183",
+                      trailColor:
+                        getDT.vote_average < 3
+                          ? "#541634"
+                          : getDT.vote_average < 7
+                          ? "#3f3d13"
+                          : "#21442b",
+                      bottomPadding: "3rem",
+                    })}
+                  />
+                </div>
+                <p className="userScoreP">
+                  User <br /> Score
+                </p>
               </div>
-              <p className="userScoreP">
-                User <br /> Score
-              </p>
               <div className="right-poster-row3-frount">
                 <div className="movie-trailer" onClick={() => setShowT("show")}>
                   <FaPlay className="I_faplay" />

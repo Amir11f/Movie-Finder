@@ -66,7 +66,7 @@ Link {
 
 .right-poster {
   min-width: 30rem;
-  padding-right: 4rem;
+  padding-right: 1rem;
   height: 36rem;
   position: relative;
   margin-top: -37rem;
@@ -230,7 +230,7 @@ Link {
 }
 
 .under-poster {
-  width: 100%;
+  width: 90%;
   display: flex;
   height: auto;
   flex-direction: row;
@@ -501,6 +501,11 @@ Link {
   overflow-x: scroll;
   width: auto;
   height: auto;
+}
+
+.midful {
+  display: flex;
+  flex-direction: row;
 }
 
 .videoBoxFather {
@@ -810,5 +815,57 @@ Link {
   .orgenize-top {
     position: relative;
     top: 7rem;
+    margin-top: 2rem;
+  }
+  .original_title {
+    color: #fff;
+    font-weight: 700;
+    font-size: 30px;
+  }
+  .release_date1 {
+    display: none;
+    color: rgb(202, 202, 202);
+    font-size: 38px;
+    font-weight: 500;
+  }
+  .right-poster-row2 {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .runtime {
+    font-size: 17px;
+    font-weight: 400;
+    margin-top: 0;
+    position: relative;
+    bottom: 2rem;
+    height: 1.7rem;
+  }
+
+  .runtime::before {
+    content: ".";
+    padding-right: 0.5rem;
+    font-size: 35px;
+    padding-left: 0;
+  }
+  .overview2 {
+    font-family: "Source Sans Pro", sans-serif;
+    margin-right: 11rem;
+  }
+  .right-poster-row3-orgenize {
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+  }
+  .mediaLists {
+    display: flex;
+    flex-direction: row;
+    width: 5rem;
+    gap: 10px;
+  }
+  .ulOrg {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
   }
 }
