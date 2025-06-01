@@ -242,7 +242,6 @@ function DetailsT() {
             </div>
           </div>
         </div>
-        <div className="right-details"></div>
       </div>
     </div>
   );

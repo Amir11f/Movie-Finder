@@ -60,7 +60,8 @@ function PosterDetails({ getDT, getTrailer }) {
       <div
         className="poster"
         style={{
-          backgroundImage: `url(https://www.themoviedb.org/t/p/w780/${getDT.backdrop_path})`,
+          backgroundImage: `url(https://www.themoviedb.org/t/p/w780/${getDT.backdrop_path}) `,
+          width: "110%",
         }}
       ></div>
       <div className="collect">
