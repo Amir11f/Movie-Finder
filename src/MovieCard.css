@@ -138,6 +138,7 @@ Link {
   color: #fff;
   font-weight: 700;
   font-size: 38px;
+  margin-right: 7rem;
 }
 
 .release_date1 {
@@ -227,10 +228,11 @@ Link {
   z-index: 9;
   position: relative;
   bottom: -5rem;
+  display: none;
 }
 
 .under-poster {
-  width: 90%;
+  width: 100%;
   display: flex;
   height: auto;
   flex-direction: row;
@@ -752,9 +754,10 @@ Link {
     display: flex;
     flex-direction: column;
     width: 100%;
+    gap: 2rem;
   }
   .poster {
-    height: 66rem;
+    min-height: 68rem;
   }
   .left-poster {
     margin: 0;
@@ -764,7 +767,7 @@ Link {
     align-items: center;
     justify-content: center;
     margin-bottom: 26rem;
-    margin-top: -65rem;
+    margin-top: -67rem;
   }
   .right-poster {
     min-width: 30rem;
@@ -801,7 +804,7 @@ Link {
   .right-poster {
     min-width: 30rem;
     padding-right: 0rem;
-    height: 36rem;
+    height: auto;
     position: relative;
     padding-left: 1rem;
     display: flex;
@@ -867,5 +870,25 @@ Link {
     display: flex;
     flex-direction: column;
     margin-bottom: 1rem;
+  }
+  .country {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8px;
+  }
+  .countries {
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+    top: -6px;
+    right: 3px;
+    margin-left: 2rem;
+  }
+  .left-details {
+    width: 100%;
+    height: 60rem;
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
   }
 }
