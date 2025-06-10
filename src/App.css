@@ -960,3 +960,14 @@ h3 {
   align-items: center;
   margin: 0 auto;
 }
+
+@media (max-width: 450px) {
+  .card_box {
+    background-color: rgb(124, 124, 124);
+    width: 12rem;
+    border-radius: 10px;
+    z-index: 1;
+    scale: 1.2;
+    margin-bottom: 4.2rem;
+  }
+}
