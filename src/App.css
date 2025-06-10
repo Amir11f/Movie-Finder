@@ -969,4 +969,7 @@ h3 {
     scale: 1.2;
     margin-bottom: 4.2rem;
   }
+  .searchOverview {
+    display: none;
+  }
 }

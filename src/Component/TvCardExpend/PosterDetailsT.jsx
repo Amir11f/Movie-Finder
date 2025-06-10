@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import ReactPlayer from "react-player";
@@ -9,6 +9,21 @@ function PosterDetails({ getDTT, getTrailer }) {
   const year = fullDate.substr(0, 4);
 
   const [showT, setShowT] = useState("hide");
+
+  const [isMobile, setIsMobile] = useState(window.innerWidth); // you can adjust the threshold
+  console.log(isMobile);
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth);
+  }, []);
+
+  function trimOverview(overview) {
+    if (overview && isMobile > 740) return overview.slice(0, 580) + " ...";
+    if (overview && overview.length > 240) {
+      return overview.slice(0, 240) + " ...";
+    }
+    return overview || "";
+  }
 
   const IndependentTrailer = () => {
     return (
@@ -41,20 +56,20 @@ function PosterDetails({ getDTT, getTrailer }) {
         </div>
       ) : null}
       <div
-        className="poster"
+        className="posterT"
         style={{
           backgroundImage: `url(https://www.themoviedb.org/t/p/w780/${getDTT?.backdrop_path})`,
         }}
       ></div>
       <div className="collect">
-        <div className="left-poster">
+        <div className="left-posterT">
           <img
             className="poster-img"
             src={`https://www.themoviedb.org/t/p/w500${getDTT?.poster_path}`}
             alt=""
           />
         </div>
-        <div className="right-posterT">
+        <div className="right-poster">
           <div className="orgenize-top">
             <div className="right-poster-row1">
               <p className="original_title">{getDTT?.name}</p>
@@ -118,7 +133,7 @@ function PosterDetails({ getDTT, getTrailer }) {
                 {getDTT.overview === "" ? null : "Overview"}
               </p>
               <p className="overview2">
-                {getDTT.overview === "" ? null : getDTT.overview}
+                {getDTT.overview === "" ? null : trimOverview(getDTT.overview)}
               </p>
             </div>
             <div className="last-this-orgenize">

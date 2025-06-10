@@ -30,6 +30,19 @@ Link {
   margin-top: 5rem;
 }
 
+.posterT {
+  width: 100%;
+  height: 36rem;
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: left calc((50vw - 170px) - 340px) top;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  margin-top: 5rem;
+}
+
 .poster::after {
   position: absolute;
   background: linear-gradient(to left, transparent, 20%, rgb(0, 0, 0));
@@ -54,6 +67,16 @@ Link {
 }
 
 .left-poster {
+  max-width: 23rem;
+  height: 36rem;
+  margin-left: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  position: relative;
+  margin-top: -36rem;
+}
+.left-posterT {
   max-width: 23rem;
   height: 36rem;
   margin-left: 2rem;
@@ -802,6 +825,10 @@ Link {
   .poster {
     min-height: 68rem;
   }
+
+  .posterT {
+    min-height: 74rem;
+  }
   .left-poster {
     margin: 0;
     max-width: 23rem;
@@ -811,6 +838,16 @@ Link {
     justify-content: center;
     margin-bottom: 26rem;
     margin-top: -67rem;
+  }
+  .left-posterT {
+    margin: 0;
+    max-width: 23rem;
+    height: 31rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 26rem;
+    margin-top: -74rem;
   }
   .right-poster {
     min-width: 30rem;
@@ -844,6 +881,15 @@ Link {
 }
 
 @media (max-width: 480px) {
+  .right-orgenize {
+    position: relative;
+    bottom: 0;
+    left: 0;
+  }
+  .last-this-orgenize {
+    display: flex;
+    flex-direction: column;
+  }
   .right-poster-row6 {
     margin-top: 1rem;
   }
