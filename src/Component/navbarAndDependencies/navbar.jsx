@@ -188,15 +188,17 @@ function Navbar() {
           <div className={`navbarOptionsBox ${state.ini5 ? "open" : "close"}`}>
             <div className="navbarOption">
               <div
-                className={` ${state.ini1 ? "divid1" : null}`}
+                className={` ${state.ini1 && "divid1"}`}
                 onClick={() => {
                   dispatch({ type: "state1" });
                 }}
               >
                 <div className="menu">
-                  <p id="menu-p-hide">Movies</p>{" "}
+                  <p id="menu-p-hide">Movies</p>
                 </div>
-                <div className={`under1 ${state.ini1 ? "active" : "inactive"}`}>
+                <div
+                  className={`under1res ${state.ini1 ? "active" : "active"}`}
+                >
                   <Link
                     to={"../pagesM/popularMovie"}
                     className="under-p1"
@@ -231,9 +233,7 @@ function Navbar() {
                 <div className="menu">
                   <p id="menu-p-hide">TVshows</p>{" "}
                 </div>
-                <div
-                  className={`under2 ${state.ini2 ? "active1" : "inactive1"}`}
-                >
+                <div className={`under2 ${state.ini2 ? "active1" : "active1"}`}>
                   <Link
                     to={"../../pagesT/PopularTv"}
                     className="under-p2"
@@ -263,11 +263,9 @@ function Navbar() {
                 }}
               >
                 <div className="menu">
-                  <p id="menu-p-hide">People</p>
+                  <p id="menu-p-hide-people">People</p>
                 </div>
-                <div
-                  className={`under3 ${state.ini3 ? "active2" : "inactive2"}`}
-                >
+                <div className={`under3 ${state.ini3 ? "active2" : "active2"}`}>
                   <Link
                     to={"/Popular"}
                     className="under-p3 make"
