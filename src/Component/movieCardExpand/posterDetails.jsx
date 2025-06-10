@@ -12,6 +12,14 @@ function PosterDetails({ getDT, getTrailer }) {
     return `${hours}h ${remainingMinutes}m`;
   }
 
+  console.log(typeof getDT?.overview);
+
+  function trimOverview(overview) {
+    if (overview && overview.length > 240) {
+      return overview.slice(0, 240) + " ...";
+    }
+    return overview || "";
+  }
   // const tarikh = Math.floor(getDT.vote_average) // we can put const in  our return
 
   const fullDate = getDT && getDT.release_date ? getDT.release_date : "";
@@ -128,7 +136,7 @@ function PosterDetails({ getDT, getTrailer }) {
             </div>
             <div className="right-poster-row5">
               <p className="overview1">Overview</p>
-              <p className="overview2">{getDT.overview}</p>
+              <p className="overview2">{trimOverview(getDT?.overview)}</p>
             </div>
             <div className="right-poster-row6">
               <div className="country">

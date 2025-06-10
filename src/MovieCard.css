@@ -844,12 +844,21 @@ Link {
 }
 
 @media (max-width: 480px) {
+  .right-poster-row6 {
+    margin-top: 1rem;
+  }
+  .showTrailer {
+    position: absolute;
+    display: flex;
+    scale: 0.3;
+  }
+
   .right-poster {
     min-width: 30rem;
     padding-right: 0rem;
     height: auto;
     position: relative;
-    padding-left: 0.5rem;
+    padding-left: 1rem;
     display: flex;
     flex-direction: column;
     color: #fff;
@@ -885,7 +894,7 @@ Link {
     font-weight: 700;
     font-size: 30px;
     margin-top: 2rem;
-    margin-right: 10rem;
+    margin-right: 7rem;
   }
   .release_date1 {
     display: none;
@@ -915,7 +924,7 @@ Link {
   }
   .overview2 {
     font-family: "Source Sans Pro", sans-serif;
-    margin-right: 11rem;
+    margin-right: 10rem;
   }
   .right-poster-row3-orgenize {
     display: flex;

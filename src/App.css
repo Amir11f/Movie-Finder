@@ -242,7 +242,6 @@ body {
   border-radius: 5px;
   display: flex;
   flex-direction: column;
-  border: 1px solid rgb(0, 0, 0, 0.2);
 }
 
 .under-p {
